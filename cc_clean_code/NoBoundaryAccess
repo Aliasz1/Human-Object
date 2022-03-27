@@ -1,0 +1,8 @@
+//this class will try to access the vehicle class without any information on the variable and functions
+
+fun main() {
+  val newCar = Car()
+  newCar.Brand = "Toyota"
+  newCar.Speed = "200kmh"
+  newCar.Seats = 2
+}

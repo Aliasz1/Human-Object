@@ -1,5 +1,5 @@
 fun main() {
-    val newCar = Car()
+  val newCar = Car()
   	newCar.Brand = "Toyota"
     newCar.Speed = "200kmh"
     newCar.Seats = 2

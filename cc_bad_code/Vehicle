@@ -1,0 +1,34 @@
+open class Vehicle {
+  var vehicleBrand = "none"
+  var topSpeed = 0
+  var maxSeat = 0
+  
+  open fun show(){
+      println(vehicleBrand + topSpeed + maxSeat)
+  }
+}
+
+class Car: Vehicle() {
+  override fun show(){
+      println(vehicleBrand + topSpeed + maxSeat)
+      println("Car")
+  }
+}
+
+class Motor: Vehicle(){
+  override fun show(){
+      println(vehicleBrand + topSpeed + maxSeat)
+      println("Motor")
+  }
+}
+
+fun main() {
+  try {
+    val newCar = Car()
+    newCar.vehicleBrand = "Toyota"
+    newCar.topSpeed = 200
+    newCar.maxSeat = 2
+    newCar.show()
+  } catch (e : Exception){
+  }
+}
