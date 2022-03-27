@@ -1,0 +1,56 @@
+// Vehicle Superclass
+open class Vehicle {
+  var vehicleBrand = ""
+  var topSpeed = 0
+  var maxSeat = 0
+  
+  open fun show(){
+      println("Brand: ${vehicleBrand}")
+      println("Top Speed: ${topSpeed}")
+      println("Max Seat: ${maxSeat}")
+  }
+}
+
+// Car Subclass
+class Car: Vehicle() {
+  override fun show(){
+      println("Brand: ${vehicleBrand}")
+      println("Top Speed: ${topSpeed}")
+      println("Max Seat: ${maxSeat}")
+      println("This is a car.")
+  }
+}
+
+//Motor Subclass
+class Motor: Vehicle(){
+  override fun show(){
+      println("Brand: ${vehicleBrand}")
+      println("Top Speed: ${topSpeed}")
+      println("Max Seat: ${maxSeat}")
+      println("This is a motor.")
+  }
+}
+
+// Create an object of the Subclasses and call show function
+fun main() {
+  //construct the two objects
+  val newCar = Car()
+  newCar.vehicleBrand = "Toyota"
+  newCar.topSpeed = 200
+  newCar.maxSeat = 2
+  
+  val newMotor = Motor()
+  
+  //try any function or changes
+  try {
+      //changing the top speed of a vehicle from int to string will return an error
+      // newMotor.topSpeed = "100"
+      newCar.show()
+    newMotor.show()
+  } 
+  
+  //returns the error message
+  catch (e : Exception){
+      println(e.message)
+  }
+}
